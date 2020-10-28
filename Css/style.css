@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+:root{
+    --primary:#2d88ff;
+    --dark:#18191a;
+    --semidark:#242526;
+    --sofdark:#3a3b3c;
+    --danger:#f02849;
+    --success:#45bd62;
+    --warning:#f7b928;
+    --textcolor:#e4e6eb;
+    --lighttext:#ffffff;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--textcolor);
+
+}
+body{
+    background-color: var(--dark);
+}
+.nav{
+    background-color: var(--semidark);
+    display: flex;
+    position: sticky;
+    top:0;
+
+}
+.left{
+    width: 25%;
+
+}
+.left-box{
+    display: flex;
+    padding: 10px;
+}
+.logo{
+    width: 40px;
+    margin-right: 10px;
+}
+.search-box{
+    background-color: var(--sofdark);
+    border-radius: 100px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+.search-box .feather-search{
+    margin-right: 10px;
+}
+.search-input{
+    color: var(--textcolor);
+    background-color: var(--sofdark);
+    border: none;
+}
+.search-input:focus{
+    outline: none;
+}
+
+.center{
+    width: 50%;
+}
+.center-box{
+    display: flex;
+    justify-content: center;
+}
+.center-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100px;
+    border-top: 5px solid var(--semidark);
+    border-bottom: 5px solid var(--semidark);
+    position: relative;
+}
+.center-link.active{
+    border-bottom-color: var(--primary);
+}
+.center-link.active .center-icon{
+    color:var(--primary);
+}
+.center-link .center-icon{
+    font-size: 30px;
+}
+.center-link .notification{
+    background-color: var(--danger);
+    padding: 1px 3px;
+    border-radius: 10px;
+    font-size: 12px;
+    position: absolute;
+    margin: 0 5px;
+    top:10px;
+    right:30px;
+    font-weight: 900;
+    color:var(--lighttext);
+    transition: 0.5s;
+}
+.center-link:hover{
+    background-color: var(--sofdark);
+    border-radius: 15px;
+}
+.center-link.active:hover{
+    background-color: var(--semidark);
+    border-radius: 0px;
+}
+.right{
+    width: 25%;
+}
+.right-box{
+    display: flex;
+   justify-content: flex-end;
+}
+.profile-box{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    border-radius: 15px;
+    padding: 5px 10px;
+    transition: 0.5s;
+}
+.profile-box:hover{
+    background-color: var(--sofdark);
+}
+.profile{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.profile-text{
+    color:var(--textcolor);
+    font-weight: bolder;
+}
+.right-notification-box{
+    display: flex;
+}
+.right-notification{
+    width: 40px;
+    height: 40px;
+    margin:10px 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--sofdark);
+    color: var(--textcolor);
+}
+.fb-body{
+    display: flex;
+}
+
+/*left aside*/
+.left-aside{
+
+    width: 25%;
+    margin-top:20px;
+    height: 100vh;
+    /*overflow-y: scroll;*/
+    /*scroll-behavior: smooth;*/
+    position: sticky;
+    top:80px;
+
+}
+.left-aside:hover{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    transition: 0.5s;
+}
+.chat-box:hover{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    transition: 0.5s;
+}
+.aside-box:hover{
+    background-color: var(--sofdark);
+}
+.aside-box{
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.pone  .pone-box1{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+
+}
+.pone  .pone-box{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-right: 10px;
+
+}
+.see-more{
+
+    width: 30px;
+    height:30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--semidark);
+    right: 295px;
+    top:155px;
+    margin-right: 10px;
+
+}
+
+
+
+
+
+
+
+
+.news-feed{
+    width: 50%;
+
+
+}
+
+
+.my-day-list{
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+.scroll-my-day{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--semidark);
+    right: 295px;
+    top:155px;
+
+}
+.my-day-items{
+    width: 120px;
+
+}
+.my-day{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    background-size: 150%;
+    background-position: center;
+    border-radius: 20px;
+    padding: 10px;
+}
+.my-day-owner{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color:var(--textcolor);
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.first{
+    background-color: var(--semidark);
+}
+.my-day-owner .feather-plus{
+   width: 30px;
+  height: 30px;
+    border-radius: 50%;
+  display: flex;
+   justify-content: center;
+  align-items: center;
+    background-color: var(--dark);
+}
+.my-day-owner-img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-size: 100%;
+    background-position: center;
+}
+.my-day-text{
+
+    bottom: 10px;
+    color: var(--lighttext);
+    font-weight: bolder;
+}
+.my-day-image{}
+.add-post{}
+.post-list{}
+.add-post{
+    background-color: var(--semidark);
+    border-radius: 20px;
+    margin-top: 20px;
+    padding:10px 20px;
+}
+.add-post-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.add-post-box .meProfile{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.add-box{
+    background-color: var(--sofdark);
+    border-radius: 100px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+.divider{
+    height: 1px;
+    background-color:var(--sofdark);
+    margin: 10px 0;
+}
+.add-file{
+    display: flex;
+    justify-content: center;
+}
+.add-file div{
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+.add-file div:hover{
+    background-color: var(--sofdark);
+
+}
+.add-file .video i{
+    color: var(--danger);
+    margin-right: 5px;
+}
+.add-file .photo i{
+    color:var(--success);
+    margin-right: 5px;
+}
+.add-file .emoji i{
+    color: var(--warning);
+    margin-right: 5px;
+}
+.post-list{}
+.posts{
+    margin-top: 10px;
+    border-radius: 20px;
+    background-color: var(--semidark);
+}
+.post-owner{
+    display: flex;
+    padding: 10px 20px;
+    flex-grow: 1;
+
+}
+.post-profile{
+    display: flex;
+    width: 90%;
+
+}
+.post-owner-profile{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.post-owner-name{}
+.time{}
+.dot{
+
+}
+.post-caption{
+    padding: 0 20px;
+}
+.post-content{
+}
+.post-content img{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.post-content video{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reaction-count{
+    padding: 0 20px;
+}
+.post-action{
+    display: flex;
+    justify-content: center;
+}
+.post-action div{
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.post-action div:hover{
+    background-color: var(--sofdark);
+}
+.like i{
+    margin-right: 5px;
+}
+.comment i{
+    margin-right: 5px;
+}
+.share i{
+    margin-right: 5px;
+}
+.divider-left{
+    height: 1px;
+    background-color:var(--sofdark);
+    margin: 10px 15px;
+}
+
+
+/*chat-box*/
+.chat-box{
+    width: 25%;
+    margin-top:20px;
+    height: 100vh;
+    /*overflow: scroll;*/
+    /*scroll-behavior: smooth;*/
+    position: sticky;
+    top:80px;
+}
+.pic{
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    border-radius: 10px;
+    transition: 0.3s;
+
+}
+.pic-box{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 10px;
+}
+.you-pages{
+    display: flex;
+    padding: 10px 30px;
+    justify-content: space-between;
+
+}
+.request-friend{
+    display: flex;
+    flex-grow: 1;
+    padding: 10px 30px;
+    justify-content: space-between;
+}
+.request-friend-logo{
+    display: flex;
+
+}
+.request-friend-logo img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.pages{
+    display: flex;
+    flex-grow: 1;
+    padding: 10px 30px;
+    align-items: center;
+}
+.pages-logo i{
+    margin-right: 10px;
+}
+.pages-logo img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.pages-names{
+}
+.button-group{
+    display: flex;
+    justify-content: center;
+}
+
+.c-button{
+    width: 90px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary);
+    margin-right: 10px;
+}
+.d-button{
+    width: 90px;
+    height:40px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--semidark);
+}
+.birthdays{
+    display: flex;
+    padding: 10px 30px;
+    align-items: center;
+}
+.present{
+    margin-right: 10px;
+}
+.you-pages-names i{
+    margin-right: 10px;
+}
+.active-now{
+    display: flex;
+    padding: 10px 30px;
+}
+.active-now-photo{
+    margin-right: 5px;
+}
+.active-now-photo img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.active-now-name{}
+.chat-box div:hover{
+    background-color: var(--sofdark);
+    border-radius: 10px;
+}
+/*::-webkit-scrollbar {*/
+/*    display: none;*/
+/*    background-color: red;*/
+/*}*/
+/* width */
+::-webkit-scrollbar {
+    width:10px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0 grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--sofdark);
+}
